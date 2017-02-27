@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+import time
 
 
 class NewVisitorTest(unittest.TestCase):
@@ -7,9 +8,10 @@ class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome('/home/kkelly/driver/chromedriver')
-        self.browser.implicitly_wait(3)
+        # self.browser.implicitly_wait(15)
 
     def tearDown(self):
+        time.sleep(5)
         self.browser.quit()
 
     def test_can_start_a_list_and_retrieve_it_later(self):
