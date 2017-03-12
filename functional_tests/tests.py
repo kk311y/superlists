@@ -100,7 +100,7 @@ class NewVisitorTest(LiveServerTestCase):
         ## We use a new browser session to make sure that no information
         ## of Edith's is coming through from cookies etc
         self.browser.quit()
-        self.browser = webdriver.Chrom('/home/kkelly/driver/chromedriver')
+        self.browser = webdriver.Chrome('/home/kkelly/driver/chromedriver')
 
         # Francis visits the home page.  There is no sign of Edith's
         # list
